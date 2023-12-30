@@ -1,1 +1,3 @@
 # Auto-Copy-Update-Files-Backup-
+
+The script monitors a user-specified source folder (watched_folder) for file creation or modifications. When such an event occurs, the script checks if the file is a directory or a temporary file. If not, it proceeds to copy the file to a destination folder (destination_folder), but only if the file is new or updated (based on modification time). This is done using shutil.copy2, which also preserves file metadata. The script runs continuously and can be stopped using a KeyboardInterrupt (Ctrl+C). This functionality is particularly useful for automatic backup systems, syncing folders, or tracking changes in a directory.
